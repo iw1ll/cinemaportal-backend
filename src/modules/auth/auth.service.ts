@@ -40,7 +40,6 @@ export class AuthService {
       throw new UnauthorizedException('Неверный пароль');
     }
 
-    // Создаём токен
     const token = await this.jwtService.signAsync({
       userId: user.id,
       email: user.email,
